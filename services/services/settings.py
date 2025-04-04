@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'clinica',
     'rest_framework',
+    'agenda',
     
 ]
 

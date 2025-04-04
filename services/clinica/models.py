@@ -1,5 +1,7 @@
 from django.db import models
 from django.core.validators import MaxLengthValidator , MinLengthValidator
+from datetime import datetime as dt
+
 
 
 class Medico(models.Model):
