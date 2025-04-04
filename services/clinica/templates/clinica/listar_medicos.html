@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+</head>
+<style type="text/css">
+    body {align-items: center;  display:column ; justify-content: center; align-content: center; justify-items: center;}
+    h1 {color : blue; }
+</style>
+<body>
+   <H1>medicos do nosso consultorio</H1>
+
+   {% if medicos%}
+   {% for medico in medicos %}
+   <li>
+       <h2>{{ medico.nome }}</h2>
+       <p>especialidade : {{ medico.especialidades }}</p>
+       <p> crm : {{ medico.crm }}</p>
+       <p> email : {{ medico.email }}</p>
+       <p><a href="#">Leia mais</a></p>
+   </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>Nenhum livro disponível no momento.</p>
+{% endif %}
+
+   <p> <a href="{%url 'criar_consultas' %}">Agende uma nova consulta</a></p>
+
+</body>
+</html>
